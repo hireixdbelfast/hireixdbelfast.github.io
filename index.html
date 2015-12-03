@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<section class="year one">
+      <h3>Year 1</h3>
+
+      <p>Coming soon</p>
+    </section>
+    <!-- /.year one -->
+
+    <section class="year two">
+      <h3>Year 2</h3>
+      {% for main in site.data.yearone.year %}
+      <ul>
+        {% assign sorted_links = (main.link | sort: 'name') %}
+        {% for item in sorted_links %}
+        <li><a href="{{ item.url }}" target="_blank">{{ item.name }}</a></li>
+        {% endfor %}
+      </ul>
+      {% endfor %}
+    </section>
+    <!-- /.year two -->
+
+    <section class="year three">
+      <h3>Year 3</h3>
+
+      <p>No students enrolled</p>
+    </section>
+    <!-- /.year three -->
+
+    <section class="year four">
+      <h3>Year 4</h3>
+
+      <p>No students enrolled</p>
+    </section>
+    <!-- /.year four -->
