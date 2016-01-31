@@ -1,10 +1,12 @@
 .idea
+old/
+old2/
+*.codekit
 
 ### Jekyll ###
 _site/
 .sass-cache/
 .jekyll-metadata
-old/
 
 ### OSX ###
 .DS_Store

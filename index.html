@@ -1,37 +1,56 @@
 ---
 layout: default
 ---
+  <header>
+    <h1 class="logo">HIRE<span>IXDBELFAST</span></h1>
 
-<section class="year one">
-      <h3>Year 1</h3>
+    <p>List of portfolios from students studying BDes (Hons) in Interaction Design at the Belfast School of Art.</p>
+  </header>
+  <div class="year-groups">
+    <section class="year one">
+        <h4>Year 1</h4>
 
-      <p>Coming soon</p>
-    </section>
-    <!-- /.year one -->
-
-    <section class="year two">
-      <h3>Year 2</h3>
-      {% for main in site.data.yearone.year %}
-      <ul>
-        {% assign sorted_links = (main.link | sort: 'name') %}
-        {% for item in sorted_links %}
-        <li><a href="{{ item.url }}" target="_blank">{{ item.name }}</a></li>
+        {% for main in site.data.yeargroup.year1 %}
+        <ul>
+          {% assign sorted_links = (main.link | sort: 'name') %}
+          {% for item in sorted_links %}
+          <li>
+            <a href="{{ item.url }}" target="_blank">{{ item.name }}</a>
+            <a class="twitter" href="https://twitter.com/{{ item.twitter }}" target="_blank"><i class="fa fa-twitter"></i></a>
+          </li>
+          {% endfor %}
+        </ul>
         {% endfor %}
-      </ul>
-      {% endfor %}
-    </section>
-    <!-- /.year two -->
+      </section>
+      <!-- /.year one -->
 
-    <section class="year three">
-      <h3>Year 3</h3>
+      <section class="year two">
+        <h4>Year 2</h4>
+        {% for main in site.data.yeargroup.year2 %}
+        <ul>
+          {% assign sorted_links = (main.link | sort: 'name') %}
+          {% for item in sorted_links %}
+          <li>
+            <a href="{{ item.url }}" target="_blank">{{ item.name }}</a>
+            <a class="twitter" href="https://twitter.com/{{ item.twitter }}" target="_blank"><i class="fa fa-twitter"></i></a>
+          </li>
+          {% endfor %}
+        </ul>
+        {% endfor %}
+      </section>
+      <!-- /.year two -->
 
-      <p>No students enrolled</p>
-    </section>
-    <!-- /.year three -->
+      <section class="year three">
+        <h4>Year 3</h4>
 
-    <section class="year four">
-      <h3>Year 4</h3>
+        <p>No students enrolled</p>
+      </section>
+      <!-- /.year three -->
 
-      <p>No students enrolled</p>
-    </section>
-    <!-- /.year four -->
+      <section class="year four">
+        <h4>Year 4</h4>
+
+        <p>No students enrolled</p>
+      </section>
+      <!-- /.year four -->
+    </div>
