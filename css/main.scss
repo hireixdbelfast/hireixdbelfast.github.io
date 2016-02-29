@@ -15,6 +15,20 @@ $link-hover:        #2C97DE;
 
 $desktop: 800px;
 
+@mixin clearfix() {
+    & {
+        *zoom: 1;
+    }
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
 html {
   box-sizing: border-box;
 }
@@ -178,7 +192,7 @@ p {
   @media screen and (min-width: $desktop) {
     flex-direction: row;
     // height: 93vh;
-    height: 100%;
+    min-height: 100%;
   }
 }
 
@@ -233,6 +247,10 @@ p {
       font-size: 1.2em;
     }
   }
+}
+
+.cf {
+  @include clearfix;
 }
 
 .one {
