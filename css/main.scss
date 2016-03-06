@@ -2,32 +2,38 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
-$year-one-colour:   #76CDFF;
-$year-two-colour:   #47BCFF;
-$year-three-colour: #0683BF;
-$year-four-colour:  #0C5582;
+// VARIABLES
 
-$primary-text-colour: #222;
+$year-one-colour:       #76CDFF;
+$year-two-colour:       #47BCFF;
+$year-three-colour:     #0683BF;
+$year-four-colour:      #0C5582;
+
+$primary-text-colour:   #222;
 $secondary-text-colour: #999;
 
-$link:              #222;
-$link-hover:        #2C97DE;
+$link:                  #222;
+$link-hover:            #2C97DE;
 
 $desktop: 800px;
 
+// MIXINS
+
 @mixin clearfix() {
-    & {
-        *zoom: 1;
-    }
-    &:before,
-    &:after {
-        content: "";
-        display: table;
-    }
-    &:after {
-        clear: both;
-    }
+  & {
+    *zoom: 1;
+  }
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
 }
+
+// STYLES
 
 html {
   box-sizing: border-box;
@@ -213,21 +219,22 @@ p {
     }
   }
 }
-.bg {
-  position: relative;
-  z-index: 1;
-  top: -65vh;
-  height: 100vh;
-  width: 100%;
 
-  opacity: 0;
-  background-image: none;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+// .bg {
+//   position: relative;
+//   z-index: 1;
+//   top: -65vh;
+//   height: 100vh;
+//   width: 100%;
 
-  transition: all 0.3s ease-in-out;
-}
+//   opacity: 0;
+//   background-image: none;
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   background-size: cover;
+
+//   transition: all 0.3s ease-in-out;
+// }
 
 .year {
   // width: 100%;
@@ -247,10 +254,6 @@ p {
       font-size: 1.2em;
     }
   }
-}
-
-.cf {
-  @include clearfix;
 }
 
 .one {
@@ -273,6 +276,8 @@ p {
   // background: $year-four-colour;
 }
 
+// KEYFRAMES
+
 @keyframes spring {
   0% {
     top: 20px;
@@ -285,4 +290,10 @@ p {
   100% {
     top: 2px;
   }
+}
+
+// QUICK FIXES
+
+.cf {
+  @include clearfix;
 }
